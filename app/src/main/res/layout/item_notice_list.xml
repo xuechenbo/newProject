@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_90"
+    android:background="@color/themeColor"
+    android:gravity="center_vertical"
+    android:padding="@dimen/dp_5">
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:text="注册推送"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_title"
+        android:layout_marginTop="@dimen/dp_5"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="15896873669已成功注册成为您的下级会员！"
+        android:textColor="@color/gray_light" />
+
+
+    <TextView
+        android:id="@+id/no_read"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="未读"
+        android:textColor="@color/theme_fontColor"
+        android:textSize="@dimen/dp_12" />
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/dp_5"
+        android:text="2019.06.05 12:56"
+        android:textColor="@color/gray_light"
+        android:textSize="@dimen/dp_10" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_content"
+        android:layout_marginTop="@dimen/dp_5"
+        android:drawableLeft="@drawable/not_icon"
+        android:drawablePadding="@dimen/dp_2"
+        android:gravity="center"
+        android:text="信聚e家"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dp_10" />
+
+    <View
+        style="@style/line"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

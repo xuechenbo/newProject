@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/themeColor1"
+    android:gravity="left"
+    android:paddingLeft="@dimen/dp_5"
+    android:paddingRight="@dimen/dp_5"
+    android:singleLine="true"
+    android:text="每日一笔"
+    android:textColor="@color/theme_fontColor"
+    android:textSize="@dimen/sp_14" />

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <color name="lightGrey">#d3d3d3</color>
+    <color name="btn_text_color">#fff</color><!--按钮文字颜色-->
+    <color name="text_color">#808080</color><!--普通文字颜色-->
+    <color name="gray_bg_f3">#f3f3f3</color><!--普通页面背景颜色-->
+
+    <color name="bg_blue">#08BDCD</color><!--顺便把这个颜色也改了-->
+    <color name="themeColor">#191919</color>
+    <color name="themeColor1">#282828</color>
+    <color name="themeColor2">#000000</color>
+
+    <color name="themeColor3">#383838</color>
+
+    <color name="theme_font_white">#EEEEEE</color>
+    <color name="theme_fontColor">#D74DD8</color>
+
+    <color name="chart1">#CE57D0</color>
+    <color name="chart2">#A246EB</color>
+
+
+    <color name="background">#08BDCD</color>
+
+    <color name="background_blue_1351E0">#191919</color>
+
+    <color name="background_black_221814">#221814</color>
+    <color name="background_orange_f08519">#f08519</color>
+    <color name="background_yellow_f1b900">#f1b900</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="view_color">#ffd0d0d0</color>
+    <color name="white_60">#3Dffffff</color>
+    <color name="dark_blue">#08BDCD</color>
+    <color name="red">#ff4949</color>
+    <color name="gray_bg_f6">#f6f6f6</color>
+
+    <color name="gray_bg_f7">#f7f7f7</color>
+    <color name="light_red">#ff7676</color>
+    <color name="green">#77c78e</color>
+    <!--首页-->
+
+
+    <color name="loan_text_color_3">#ff488bf4</color>
+
+
+    <color name="register_text_color_1">#c8c8c8</color>
+
+
+    <color name="black">#000000</color>
+    <color name="black_55">#55000000</color>
+    <color name="white">#FFFFFF</color><!--白色 -->
+    <color name="black_f2">#f2f2f2</color>
+
+    <color name="orange_fb8d1c">#FD8031</color><!-- 黄红色 -->
+    <!-- 黄红色 -->
+    <!--<color name="title_bg">#7caffd</color>-->
+    <color name="gray_A6BCE8">#A6BCE8</color>
+
+    <color name="gray_light">#ffb0b0b0</color>
+
+    <!--内容文本字体颜色-->
+
+    <color name="gray_line">#ebebeb</color>
+    <color name="gray_888">#C5C5C5</color>
+    <color name="text_666">#666666</color>
+    <!--修改的字体颜色-->
+
+    <color name="gray">#DCDCDC</color>
+
+    <color name="black_101010">#101010</color>
+</resources>

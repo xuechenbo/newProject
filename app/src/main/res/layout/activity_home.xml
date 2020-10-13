@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cl_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/fl_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/ll1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/themeColor1"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <View
+            android:layout_width="50dp"
+            android:layout_height="@dimen/dp_2"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dp_2"
+            android:background="@color/theme_fontColor" />
+
+        <RadioGroup
+            android:id="@+id/rg_tab"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipChildren="false"
+            android:gravity="center_vertical|bottom"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/dp_5"
+            android:paddingBottom="@dimen/dp_8">
+
+            <RadioButton
+                android:id="@+id/rb_shop"
+                style="@style/RadioButton_XDTX"
+                android:checked="false"
+                android:drawableTop="@drawable/tab_shop_selector"
+                android:drawablePadding="@dimen/dp_5"
+                android:text="商城"
+                android:visibility="visible" />
+
+
+            <RadioButton
+                android:id="@+id/rb_infor"
+                style="@style/RadioButton_XDTX"
+                android:checked="false"
+                android:drawableTop="@drawable/tab_infor_selector"
+                android:drawablePadding="@dimen/dp_5"
+                android:text="资讯" />
+
+
+            <RadioButton
+                android:id="@+id/rb_home"
+                style="@style/RadioButton_XDTX"
+                android:checked="true"
+                android:drawableTop="@drawable/home_icon"
+                android:drawablePadding="@dimen/dp_5"
+                android:text="首页" />
+
+            <RadioButton
+                android:id="@+id/rb_help"
+                style="@style/RadioButton_XDTX"
+                android:checked="false"
+                android:drawableTop="@drawable/tab_help_selector"
+                android:drawablePadding="@dimen/dp_5"
+                android:text="帮助中心" />
+
+            <RadioButton
+                android:id="@+id/rb_mine"
+                style="@style/RadioButton_XDTX"
+                android:checked="false"
+                android:drawableTop="@drawable/tab_mine_selector"
+                android:drawablePadding="@dimen/dp_5"
+                android:text="我的" />
+        </RadioGroup>
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

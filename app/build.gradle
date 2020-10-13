@@ -1,0 +1,158 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+
+    signingConfigs {
+        release {
+            storeFile file('D:/Android_Project/jxyj/app/release/jxej.jks')
+            keyAlias 'key0'
+            keyPassword '123456'
+            storePassword '123456'
+        }
+    }
+    compileSdkVersion 27
+    buildToolsVersion "27.0.3"
+    defaultConfig {
+        multiDexEnabled true //qqq
+        applicationId "com.kotyj.com"
+        minSdkVersion 17
+        targetSdkVersion 26
+
+        ndk {
+            //选择要添加的对应cpu类型的.so库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'armeabi-v8a', 'x86'
+            // 还可以添加 'x86', 'x86_64', 'mips', 'mips64'
+        }
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: applicationId,
+                JPUSH_APPKEY : "6e12084af21a13a556d68de0", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+        ]
+    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt', 'bqs-proguard-rules.pro'
+            signingConfig signingConfigs.release//签名
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt', 'bqs-proguard-rules.pro'
+            signingConfig signingConfigs.release//签名
+        }
+        applicationVariants.all { variant ->
+            variant.outputs.all {
+                if (variant.name.endsWith("release")) {
+                    outputFileName = "jxyj.apk"
+                }
+            }
+        }
+    }
+}
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    implementation 'com.google.code.gson:gson:2.4'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.android.support:design:27.0.0'
+    implementation 'com.android.support:recyclerview-v7:27.0.0'
+    implementation 'com.android.support:cardview-v7:27.0.0'
+    implementation 'com.android.support:appcompat-v7:27.0.0'
+    //图片加载Glide4
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+    implementation 'jp.wasabeef:glide-transformations:3.0.1'
+    //implementation 'com.github.bumptech.glide:okhttp3-integration:1.5.0@aar'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.alibaba:fastjson:1.2.7'
+    //loading
+    implementation 'com.lsjwzh:materialloadingprogressbar:0.5.8-RELEASE'
+    //极光推送
+    implementation 'cn.jiguang.sdk:jpush:3.3.4'
+    implementation 'cn.jiguang.sdk:jcore:2.1.2'
+    //分享
+    implementation files('libs/MobCommons-2016.0426.1819.jar')
+    implementation files('libs/MobTools-2016.0426.1819.jar')
+    implementation files('libs/ShareSDK-Core-2.7.2.jar')
+    implementation files('libs/ShareSDK-QQ-2.7.2.jar')
+    implementation files('libs/ShareSDK-QZone-2.7.2.jar')
+    implementation files('libs/ShareSDK-Wechat-2.7.2.jar')
+    implementation files('libs/ShareSDK-Wechat-Core-2.7.2.jar')
+    implementation files('libs/ShareSDK-Wechat-Moments-2.7.2.jar')
+    //二维码
+    implementation files('libs/zxing.jar')
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.40'
+    //刷新
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.4'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.4'
+    //布局组件初始化
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    implementation files('libs/pinyin4j-2.5.0.jar')
+    implementation 'com.github.paradoxie:AutoVerticalTextview:0.1'
+    //okgo下载框架
+    implementation 'com.lzy.net:okgo:3.0.4'
+    implementation 'com.lzy.net:okserver:2.0.5'
+    implementation 'org.greenrobot:eventbus:3.0.0'
+    //时间选择
+    implementation 'com.contrarywind:Android-PickerView:4.1.7'
+    //x5webview,腾讯webview工具
+    implementation files('libs/tbs_sdk_thirdapp_v3.6.0.1371_43624_sharewithdownload_withoutGame_obfs_20181106_121046.jar')
+    implementation 'com.prolificinteractive:material-calendarview:1.4.3'
+    //支付宝支付
+    implementation files('libs/alipaySdk-20180601.jar')
+    //微信支付
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+    //轮播图
+    implementation 'com.youth.banner:banner:1.4.10'
+    //模仿微信选择相册
+    api('com.cysion:ImagePicker:1.0.6') {
+        exclude group: 'com.android.support'
+    }
+    //新手指引
+    implementation project(':highlight')
+    implementation files('libs/Msc.jar')
+    implementation files('libs/Sunflower.jar')
+    //bugly
+    implementation files('libs/bugly_crash_release.jar')
+    implementation files('libs/windvane-min-8.0.3.2.3.jar')
+    //阿里云实人
+    implementation(name: 'oss-android-sdk-2.9.2', ext: 'aar')
+    implementation(name: 'FaceLivenessOpen-2.1.6.15', ext: 'aar')
+    implementation(name: 'rpsdk-3.1.0.1', ext: 'aar')
+    implementation(name: 'SecurityGuardSDK-external-release-5.4.9901', ext: 'aar')
+    implementation(name: 'SecurityBodySDK-external-release-5.4.79', ext: 'aar')
+    implementation(name: 'NoCaptchaSDK-external-release-5.4.33', ext: 'aar')
+    implementation files('libs/logging-interceptor-3.12.0.jar')
+    //百度识别
+    implementation files('libs/ocr-sdk.jar')
+    implementation project(':ocr_ui')
+    implementation 'org.jetbrains.anko:anko:0.10.8'
+
+    implementation 'com.just.agentweb:agentweb:4.0.2'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.0.2'
+    implementation 'com.github.pinguo-zhouwei:MZBannerView:v2.0.2'
+    //这个没有旋转可惜
+    implementation project(':takephoto_library')
+    //59acb  使用版本:  https://github.com/Yalantis/uCrop/tree/59acb992e4960e002777333a6bd830385d324a3b
+    implementation project(':ucrop')
+}
+
+

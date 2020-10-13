@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">全转</string>
+    <string name="server_error">服务器异常</string>
+    <string name="loading_wait">请稍等...</string>
+    <!-- 键盘数字 -->
+    <string name="nonetwork">没有可用的网络！</string>
+    <string name="service_number">4000280155</string>
+    <string name="one_num">1</string>
+    <string name="two_num">2</string>
+    <string name="three_num">3</string>
+    <string name="four_num">4</string>
+    <string name="five_num">5</string>
+    <string name="six_num">6</string>
+    <string name="seven_num">7</string>
+    <string name="eight_num">8</string>
+    <string name="nine_num">9</string>
+    <string name="zero_num">0</string>
+    <string name="point">.</string>
+    <string name="defaultnum">0.00</string>
+    <string name="only_num_en">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+    <string name="digit_idcard_number">0123456789X</string>
+    <!-- 请替换成在语音云官网申请的appid -->
+    <!-- 听写 -->
+
+
+    <!-- 合成 -->
+    <!-- 语言 -->
+    <!-- 语音评测 -->
+    <!-- 标点符号 -->
+
+
+    <!-- 语言 -->
+
+    <string name="icon_check">&#xe6fa;</string>
+    <string name="icon_check_rectangle">&#xe661;</string>
+</resources>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/dp_20"
+    android:layout_marginRight="@dimen/dp_20"
+    android:background="@drawable/shape_theme_black_corners_25"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:gravity="center"
+        android:text="注意事项"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_18" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/gray_line" />
+
+    <LinearLayout
+        android:id="@+id/ll_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#4C4C4E"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_10">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="一.以下卡种暂不支持代还:\n1.外汇卡、双币卡\n2.二合一卡(二合一卡指的是同时拥有储蓄，以及信用卡功能的卡)如中信二合一卡，这类卡不支持代还\n3.特殊卡种：指稀有卡，不在市面上大范围流通的卡种，如奋斗卡;\n4.部分区域性地方银行暂不支持。请确认该信用卡为支持卡种，再予以认证，否则会导致信用卡认证失败\n二.请务必准确填写认证信用卡相关信息，所填手机号为该信用卡在银行预留手机号!"
+            android:textColor="@color/gray_888" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40">
+
+        <TextView
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_40"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/btn_admit"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_40"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/theme_fontColor" />
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/themeColor"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/dp_10">
+
+    <include layout="@layout/banner_item" />
+
+    <Button
+        android:id="@+id/btn_change"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_40"
+        android:layout_marginRight="@dimen/dp_15"
+        android:background="@drawable/shape_theme_btn_25"
+        android:gravity="center"
+        android:text="修改储蓄卡"
+        android:textColor="@color/white" />
+
+</LinearLayout>

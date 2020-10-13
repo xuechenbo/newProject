@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ucrop_color_default_logo1"
+    android:visibility="gone"
+    tools:showIn="@layout/ucrop_activity_photobox"
+    tools:visibility="visible">
+
+    <TextView
+        android:id="@+id/text_view_rotate"
+        style="@style/ucrop_TextViewWidgetText"
+        android:text="100°"
+        android:visibility="gone" />
+
+    <com.yalantis.ucrop.view.widget.HorizontalProgressWheelView
+        android:id="@+id/rotate_scroll_wheel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/text_view_rotate"
+        android:layout_toStartOf="@+id/wrapper_rotate_by_angle"
+        android:layout_toLeftOf="@+id/wrapper_rotate_by_angle"
+        android:layout_toEndOf="@+id/wrapper_reset_rotate"
+        android:layout_toRightOf="@+id/wrapper_reset_rotate"
+        android:background="@drawable/ucrop_wrapper_controls_shape"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/wrapper_reset_rotate"
+        style="@style/ucrop_WrapperRotateButton"
+        android:layout_centerVertical="true"
+        android:background="@color/ucrop_color_default_logo1">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/quxiao" />
+
+        <TextView
+            android:id="@+id/tv_reduction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="35dp"
+            android:layout_toRightOf="@+id/iv_back"
+            android:text="还原"
+            android:textColor="#fff" />
+        <!--<ImageView-->
+        <!--style="@style/ucrop_ImageViewWidgetIcon"-->
+        <!--app:srcCompat="@drawable/quxiao" />-->
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/wrapper_rotate_by_angle"
+        style="@style/ucrop_WrapperRotateButton"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@color/ucrop_color_default_logo1">
+
+
+        <ImageView
+            android:id="@+id/iv_save"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tv_rotating"
+            android:scaleType="centerCrop"
+            android:src="@drawable/qued" />
+
+        <TextView
+            android:id="@+id/tv_rotating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginRight="30dp"
+            android:text="旋转"
+            android:textColor="#fff" />
+
+
+        <!--<ImageView-->
+        <!--style="@style/ucrop_ImageViewWidgetIcon"-->
+        <!--android:src="@drawable/qued" />-->
+
+    </RelativeLayout>
+
+</RelativeLayout>

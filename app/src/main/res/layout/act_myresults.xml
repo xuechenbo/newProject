@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/themeColor"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title" />
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tl_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_header"
+        android:visibility="visible"
+        app:tabIndicatorColor="@color/theme_fontColor"
+        app:tabIndicatorHeight="@dimen/dp_3"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="@color/theme_fontColor"
+        app:tabTextColor="@color/white">
+
+        <android.support.design.widget.TabItem
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="个人交易量" />
+
+        <android.support.design.widget.TabItem
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="直推交易量" />
+
+        <android.support.design.widget.TabItem
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="团队交易量" />
+
+    </android.support.design.widget.TabLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@drawable/shape_theme_black_corners_5"
+        android:padding="@dimen/dp_8">
+
+        <TextView
+            android:id="@+id/tv_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="￥365888"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_22" />
+
+        <TextView
+            android:id="@+id/tv_compare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_money"
+            android:text="+7% 上周"
+            android:textSize="@dimen/dp_10" />
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/lineChart"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_below="@+id/tv_compare"
+            android:layout_marginTop="@dimen/dp_10">
+
+        </com.github.mikephil.charting.charts.LineChart>
+
+
+        <ImageView
+            android:id="@+id/iv_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lineChart"
+            android:background="@drawable/line_bg" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_line"
+            android:layout_marginTop="@dimen/dp_5"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/color_3"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:gravity="center"
+                    android:text="还款(预留+空卡)"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dp_12" />
+
+                <TextView
+                    android:id="@+id/tv_hk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+23%" />
+            </LinearLayout>
+
+
+            <View
+                android:id="@+id/v"
+                android:layout_width="@dimen/dp_1"
+                android:layout_height="@dimen/dp_40"
+                android:background="#737070"
+                app:layout_constraintLeft_toRightOf="@+id/tv_hk"
+                app:layout_constraintRight_toLeftOf="@id/tv_sk" />
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/color_5"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:gravity="center"
+                    android:text="刷卡"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dp_12" />
+
+                <TextView
+                    android:id="@+id/tv_sk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+13%" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

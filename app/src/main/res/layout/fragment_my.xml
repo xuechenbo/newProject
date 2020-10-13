@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#191919"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.5"
+                android:background="@drawable/shape_mine_top"
+                android:paddingBottom="@dimen/dp_5">
+
+                <ImageView
+                    android:id="@+id/iv_avatar"
+                    android:layout_width="@dimen/dp_80"
+                    android:layout_height="@dimen/dp_80"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:src="@drawable/head_mine"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/iv_leve"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/level2"
+                    android:visibility="invisible"
+                    app:layout_constraintRight_toRightOf="@+id/iv_avatar"
+                    app:layout_constraintTop_toTopOf="@id/iv_avatar" />
+
+                <ImageView
+                    android:id="@+id/iv_update"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/mine_update"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_avatar"
+                    app:layout_constraintLeft_toLeftOf="@+id/iv_avatar" />
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:text="用户昵称"
+                    android:textColor="@color/theme_font_white"
+                    android:textSize="@dimen/sp_16"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="@+id/iv_avatar"
+                    app:layout_constraintRight_toLeftOf="@+id/tv_level"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_avatar"
+                    app:layout_goneMarginTop="@dimen/dp_10" />
+
+
+                <TextView
+                    android:id="@+id/tv_level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_15"
+                    android:background="@drawable/shape_solid_light_yellow_corner_5"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/dp_8"
+                    android:paddingTop="@dimen/dp_3"
+                    android:paddingRight="@dimen/dp_8"
+                    android:paddingBottom="@dimen/dp_3"
+                    android:text="级别"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_11"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_name"
+                    app:layout_constraintLeft_toRightOf="@id/tv_name"
+                    app:layout_constraintRight_toRightOf="@+id/iv_avatar" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_2"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_marginRight="@dimen/dp_20"
+                android:background="#444444" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingLeft="@dimen/dp_20"
+                android:paddingRight="@dimen/dp_20">
+
+                <ImageView
+                    android:id="@+id/iv_real"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/mine_real" />
+
+                <ImageView
+                    android:id="@+id/iv_pack"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:layout_weight="1"
+                    android:src="@drawable/mine_pack" />
+
+                <ImageView
+                    android:id="@+id/iv_up"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:layout_weight="1"
+                    android:src="@drawable/mine_leve_up" />
+
+                <ImageView
+                    android:id="@+id/iv_share"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:layout_weight="1"
+                    android:src="@drawable/mine_share" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_2"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_3"
+                android:layout_marginRight="@dimen/dp_20"
+                android:background="#444444" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_wall"
+                style="@style/mine_item1"
+                android:drawableLeft="@drawable/mine_wall"
+                android:text="我的钱包" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:background="#444444" />
+
+            <TextView
+                android:id="@+id/tv_team"
+                style="@style/mine_item1"
+                android:drawableLeft="@drawable/mine_team"
+                android:text="我的社群" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:background="#444444" />
+
+            <TextView
+                android:id="@+id/tv_results"
+                style="@style/mine_item1"
+                android:drawableLeft="@drawable/mine_results"
+                android:text="我的业绩" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:background="#444444" />
+
+            <TextView
+                android:id="@+id/tv_integer"
+                style="@style/mine_item1"
+                android:drawableLeft="@drawable/mine_integer"
+                android:text="我的积分" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:background="#444444" />
+
+            <TextView
+                android:id="@+id/tv_Insur"
+                style="@style/mine_item1"
+                android:drawableLeft="@drawable/mine_insur"
+                android:text="我的保单" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:background="#444444" />
+
+            <TextView
+                android:id="@+id/tv_ustomer"
+                style="@style/mine_item1"
+                android:drawableLeft="@drawable/mine_ustomer"
+                android:text="我的客服" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:background="#444444" />
+
+            <TextView
+                android:id="@+id/tv_setting"
+                style="@style/mine_item1"
+                android:drawableLeft="@drawable/mine_setting"
+                android:text="我的设置" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:background="#444444" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

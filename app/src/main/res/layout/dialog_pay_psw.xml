@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_white_corners_25"
+    android:orientation="vertical"
+    android:padding="@dimen/dp_20">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="请输入App支付密码"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_18"
+        android:textStyle="bold" />
+
+    <com.kotyj.com.viewone.SeparatedEditText
+        android:id="@+id/pas"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="@dimen/dp_10"
+        android:layout_marginTop="20dp"
+        android:inputType="number"
+        app:borderColor="@color/lightGrey"
+        app:corner="10dp"
+        app:cursorColor="@android:color/holo_orange_light"
+        app:cursorWidth="3dp"
+        app:maxLength="6"
+        app:password="true"
+        app:separateType="@integer/type_hollow"
+        app:textColor="@color/colorAccent" />
+
+</LinearLayout>
