@@ -32,11 +32,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-/**
- * @作者 chenlanxin
- * @创建日期 2019/2/22 9:53
- * @功能
- **/
+//TODO 修改更新
 public class HomeNewActivity extends BaseActivity implements CompoundButton.OnCheckedChangeListener {
 
 
