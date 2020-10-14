@@ -184,7 +184,6 @@ public class MineFragment extends BaseFragment {
                         }
                         UserInfoModel userInfoModel = list.get(0);
 
-
                         StorageCustomerInfo02Util.putInfo(context, "isPay", userInfoModel.getIsPay());
 
                         //昵称
