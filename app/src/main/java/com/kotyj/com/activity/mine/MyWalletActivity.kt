@@ -38,12 +38,14 @@ class MyWalletActivity : BaseActivity() {
         }
         //转入余额
         tv_yue.setOnClickListener {
-            startActivity<WithdrawalActivity>("type" to true, "title" to "转入余额", "money" to totalMoney)
+            //            startActivity<WithdrawalActivity>("type" to true, "title" to "转入余额", "money" to totalMoney)
+            startActivity<WithdrawalKotActivity>("type" to true, "title" to "转入余额", "money" to totalMoney)
 
         }
         //TODO 收益提现
         tv_earn_detail.setOnClickListener {
-            startActivity<WithdrawalActivity>("title" to "收益提现", "money" to withdrawalMoney)
+            //            startActivity<WithdrawalActivity>("title" to "收益提现", "money" to withdrawalMoney)
+            startActivity<WithdrawalKotActivity>("title" to "收益提现", "money" to withdrawalMoney)
         }
         //交易记录
         tv_Payrecord.setOnClickListener {

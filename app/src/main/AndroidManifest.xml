@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.kotyj.com"
     android:versionCode="1"
-    android:versionName="1.0.0">
+    android:versionName="1.0.3">
 
     <!-- Required -->
     <uses-permission android:name="com.kotyj.com.permission.JPUSH_MESSAGE" />
@@ -16,15 +16,12 @@
         tools:ignore="ProtectedPermissions" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
-    <!-- Optional. Required for location feature -->
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-    <!-- 用于开启 debug 版本的应用在6.0 系统上 层叠窗口权限 -->
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
     <uses-permission android:name="android.permission.GET_TASKS" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <!-- 获取用户设备的IMEI -->
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.BLUETOOTH" />
@@ -33,9 +30,7 @@
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
-    <!-- 安装未知来源应用 -->
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
-    <!-- SO文件加载 -->
     <uses-permission
         android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
         tools:ignore="ProtectedPermissions" />
@@ -84,7 +79,6 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
 
-            <!-- 调用新浪原生SDK，需要注册的回调activity -->
             <intent-filter>
                 <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
 
@@ -114,7 +108,6 @@
                 <data android:scheme="wx9dfe0bb5db6cd3b6" />
             </intent-filter>
         </activity>
-        <!-- &lt;!&ndash;android:theme="@style/SplashTheme"&ndash;&gt;解决启动白屏问题 -->
         <activity
             android:name=".activity.login.LaunchActivity"
             android:screenOrientation="portrait">
@@ -154,7 +147,6 @@
         <!-- 实名认证-ocr识别 -->
         <!-- 实名认证-绑定储蓄卡 -->
 
-
         <!-- 绑定银行卡 -->
         <activity
             android:name=".activity.wkyk.newwkyk.AddBankCardActivity"
@@ -162,9 +154,6 @@
             android:theme="@style/MainTheme" />
 
         <!-- 提现页面 -->
-        <activity
-            android:name=".activity.mine.WithdrawalActivity"
-            android:screenOrientation="portrait" />
         <activity
             android:name=".activity.fun.WebViewActivity"
             android:screenOrientation="portrait" />
@@ -382,6 +371,7 @@
         <activity android:name=".activity.mine.EarningsListActivity" />
         <activity android:name=".activity.mine.MyIntegerActivity" />
 
+        <activity android:name=".activity.mine.WithdrawalKotActivity" />
 
     </application>
 

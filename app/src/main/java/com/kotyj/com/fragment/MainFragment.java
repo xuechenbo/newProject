@@ -69,9 +69,6 @@ public class MainFragment extends BaseFragment {
         return new MainFragment();
     }
 
-
-    //2+10==12*2==24
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // TODO: inflate a fragment view
@@ -95,9 +92,7 @@ public class MainFragment extends BaseFragment {
         initListener();
         loadImageData();
         loadNotice("");
-
     }
-
 
     private void initListener() {
         banner.setOnBannerListener(new OnBannerListener() {
@@ -108,8 +103,6 @@ public class MainFragment extends BaseFragment {
                 }
             }
         });
-
-
         String planMsg = StorageCustomerInfo02Util.getInfo("planMsg", context);
         String ptrMsg = StorageCustomerInfo02Util.getInfo("PTRMsg", context);
 
